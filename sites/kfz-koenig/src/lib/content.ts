@@ -14,9 +14,9 @@ export const business = {
   emergencyPhoneDisplay: "0171 555 120-9",
   email: "service@koenig-werkstatt.de",
   street: "Industriestraße 24",
-  zip: "44319",
-  city: "Dortmund",
-  region: "NRW",
+  zip: "71691",
+  city: "Freiberg",
+  region: "BW",
   lat: 51.5283,
   lng: 7.5995,
   url: "https://koenig-werkstatt-demo.de",
@@ -211,12 +211,12 @@ export const faqs = [
 ] as const;
 
 export const seo = {
-  title: "Kfz-Werkstatt Dortmund | KÖNIG Werkstatt — Meisterbetrieb für Autoreparatur",
+  title: "Kfz-Werkstatt Freiberg | KÖNIG Werkstatt — Meisterbetrieb für Autoreparatur",
   description:
     "Ihre Kfz-Werkstatt in Dortmund: Inspektion, Bremsenservice, Reifenwechsel, Fehlerdiagnose, Klimaservice & TÜV-Vorbereitung. Meisterbetrieb mit transparenter Freigabe vor jeder Reparatur. Jetzt online Termin anfragen.",
   keywords: [
-    "Kfz-Werkstatt Dortmund",
-    "Autoreparatur Dortmund",
+    "Kfz-Werkstatt Freiberg",
+    "Autoreparatur Freiberg",
     "Inspektion",
     "Bremsenservice",
     "Reifenwechsel",
