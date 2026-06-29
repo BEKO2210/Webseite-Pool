@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0a0b;
+  --color-surface: #121316;
+  --color-surface-2: #191b1f;
+  --color-line: rgba(255, 255, 255, 0.08);
+  --color-ember: #ff6b2c;
+  --color-ember-soft: #ff8a50;
+  --color-amber-glow: #ffb454;
+  --color-ice: #9bb2c9;
+  --color-paper: #f2efe9;
+  --color-muted: #989a9e;
+  --font-display: var(--font-khand), "Arial Narrow", sans-serif;
+  --font-body: var(--font-archivo), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-paper);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-ember);
+  color: #0a0a0b;
+}
+
+/* ── Cinematic atmosphere ─────────────────────────────── */
+
+.noise::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Lichtkegel — workshop spotlight cone */
+.spotlight {
+  background:
+    radial-gradient(ellipse 60% 45% at 70% 0%, rgba(255, 180, 84, 0.14), transparent 70%),
+    radial-gradient(ellipse 45% 35% at 25% 10%, rgba(155, 178, 201, 0.07), transparent 70%);
+}
+
+.glow-ember {
+  box-shadow:
+    0 0 0 1px rgba(255, 107, 44, 0.35),
+    0 8px 40px -8px rgba(255, 107, 44, 0.45);
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.16);
+  color: transparent;
+}
+
+/* Scan line sweep for diagnostic placeholders */
+@keyframes scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(420%); }
+}
+.animate-scan {
+  animation: scan 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Slow drift for placeholder "video loop" feel */
+@keyframes drift {
+  0%, 100% { transform: scale(1.04) translate(0, 0); }
+  50% { transform: scale(1.1) translate(-1.5%, -1%); }
+}
+.animate-drift {
+  animation: drift 14s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+.animate-pulse-soft {
+  animation: pulse-soft 2.4s ease-in-out infinite;
+}
+
+/* Marquee for brand strip */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-scan, .animate-drift, .animate-marquee, .animate-pulse-soft {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
