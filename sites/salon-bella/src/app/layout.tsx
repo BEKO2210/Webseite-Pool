@@ -36,11 +36,13 @@ export const metadata: Metadata = {
     siteName: business.name,
     title: seo.title,
     description: seo.description,
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: `${business.name} — Friseur & Beauty in ${business.city}` }],
   },
   twitter: {
     card: "summary_large_image",
     title: seo.title,
     description: seo.description,
+    images: ["/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: { canonical: business.url },
