@@ -1,5 +1,7 @@
 # Salon Bella — Friseur- & Beauty-Landingpage (Demo Nr. 2)
 
+https://webseite-pool.vercel.app/
+
 Premium-Demo-Landingpage für einen Friseur- & Beauty-Salon: elegantes, warm-dunkles
 Design mit Champagne-Gold-Akzent und Serif-Display, echte Video-Loops aus dem Salon,
 Terminanfrage-Formular, Local-SEO (JSON-LD HairSalon), Framer-Motion-Animationen,
