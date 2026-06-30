@@ -1,4 +1,4 @@
-import { Wrench } from "lucide-react";
+import { Scissors } from "lucide-react";
 import { business } from "@/lib/content";
 
 export function Footer() {
@@ -9,15 +9,15 @@ export function Footer() {
           <div className="md:col-span-2">
             <p className="flex items-center gap-2.5">
               <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-ember text-bg">
-                <Wrench className="h-4 w-4" strokeWidth={2.5} aria-hidden />
+                <Scissors className="h-4 w-4" strokeWidth={2.5} aria-hidden />
               </span>
-              <span className="font-display text-lg font-semibold uppercase tracking-wide">
-                König<span className="text-ember">.</span>Werkstatt
+              <span className="font-display text-xl font-semibold uppercase tracking-wide">
+                Salon<span className="text-ember">.</span>Bella
               </span>
             </p>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
-              {business.masterSince}. Inspektion, Diagnose, Bremsen, Reifen, Klima
-              und TÜV-Vorbereitung — markenübergreifend in {business.city}.
+              {business.masterSince}. Schnitt, Coloration, Balayage, Pflege,
+              Braut-Styling und Beauty — mitten in {business.city}.
             </p>
           </div>
 

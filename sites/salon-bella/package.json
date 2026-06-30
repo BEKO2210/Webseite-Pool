@@ -1,8 +1,8 @@
 {
-  "name": "kfz-werkstatt-template",
+  "name": "salon-bella",
   "version": "1.0.0",
   "private": true,
-  "description": "Premium Demo-Landingpage für Kfz-Werkstätten — Template Nr. 1",
+  "description": "Premium Demo-Landingpage für Friseur- & Beauty-Salon (Salon Bella) — Demo Nr. 2",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

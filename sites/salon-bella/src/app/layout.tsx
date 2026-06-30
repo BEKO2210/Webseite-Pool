@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Khand, Archivo, IBM_Plex_Mono } from "next/font/google";
+import { Cormorant_Garamond, Archivo, IBM_Plex_Mono } from "next/font/google";
 import { business, seo, openingHoursSchema, services, reviews } from "@/lib/content";
 import "./globals.css";
 
-const khand = Khand({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["500", "600", "700"],
-  variable: "--font-khand",
+  variable: "--font-cormorant",
   display: "swap",
 });
 
@@ -36,7 +36,6 @@ export const metadata: Metadata = {
     siteName: business.name,
     title: seo.title,
     description: seo.description,
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: business.name }],
   },
   twitter: {
     card: "summary_large_image",
@@ -47,10 +46,10 @@ export const metadata: Metadata = {
   alternates: { canonical: business.url },
 };
 
-/** JSON-LD: schema.org AutoRepair (LocalBusiness) für Local SEO */
+/** JSON-LD: schema.org HairSalon (LocalBusiness) für Local SEO */
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "AutoRepair",
+  "@type": "HairSalon",
   name: business.name,
   legalName: business.legalName,
   url: business.url,
@@ -58,7 +57,6 @@ const jsonLd = {
   email: business.email,
   foundingDate: String(business.founded),
   priceRange: "€€",
-  image: `${business.url}/og-image.jpg`,
   address: {
     "@type": "PostalAddress",
     streetAddress: business.street,
@@ -79,7 +77,7 @@ const jsonLd = {
   },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Werkstattleistungen",
+    name: "Salon-Leistungen",
     itemListElement: services.map((s) => ({
       "@type": "Offer",
       itemOffered: { "@type": "Service", name: s.title, description: s.text },
@@ -89,7 +87,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="de" className={`${khand.variable} ${archivo.variable} ${plexMono.variable}`}>
+    <html lang="de" className={`${cormorant.variable} ${archivo.variable} ${plexMono.variable}`}>
       <body>
         <script
           type="application/ld+json"

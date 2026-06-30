@@ -49,14 +49,14 @@ export function Booking() {
             <SectionHeading
               kicker="Terminbuchung"
               title="Termin anfragen — in 60 Sekunden"
-              text="Kurz ausfüllen, abschicken, fertig. Wir melden uns werktags innerhalb von 24 Stunden mit einem festen Terminvorschlag."
+              text="Kurz ausfüllen, abschicken, fertig. Wir melden uns werktags innerhalb weniger Stunden mit einem festen Terminvorschlag."
             />
             <Reveal delay={0.15}>
               <ul className="mt-8 space-y-4">
                 {[
-                  "Unverbindliche Anfrage — kein Vertragsabschluss",
-                  "Festpreis-Angebot vor jeder Reparatur",
-                  "Ersatzwagen & Hol-/Bringservice auf Wunsch",
+                  "Unverbindliche Anfrage — du legst dich zu nichts fest",
+                  "Kostenlose Typberatung vor jeder Behandlung",
+                  "Espresso oder Prosecco gehen aufs Haus",
                 ].map((t) => (
                   <li key={t} className="flex items-center gap-3 text-sm text-paper/75">
                     <ShieldCheck className="h-5 w-5 shrink-0 text-ember" aria-hidden />
@@ -137,18 +137,6 @@ export function Booking() {
                       <input id="email" name="email" type="email" required autoComplete="email" placeholder="max@beispiel.de" className={inputCls} />
                     </div>
                     <div>
-                      <label htmlFor="vehicle" className="mb-1.5 block text-xs font-medium text-paper/70">
-                        Fahrzeugmodell *
-                      </label>
-                      <input id="vehicle" name="vehicle" required placeholder="z. B. VW Golf 8, 2021" className={inputCls} />
-                    </div>
-                    <div>
-                      <label htmlFor="plate" className="mb-1.5 block text-xs font-medium text-paper/70">
-                        Kennzeichen <span className="text-muted">(optional)</span>
-                      </label>
-                      <input id="plate" name="plate" placeholder="DO-XX 123" className={`${inputCls} font-mono uppercase`} />
-                    </div>
-                    <div>
                       <label htmlFor="service" className="mb-1.5 block text-xs font-medium text-paper/70">
                         Gewünschte Leistung *
                       </label>
@@ -161,6 +149,12 @@ export function Booking() {
                       </select>
                     </div>
                     <div>
+                      <label htmlFor="stylist" className="mb-1.5 block text-xs font-medium text-paper/70">
+                        Wunsch-Stylist <span className="text-muted">(optional)</span>
+                      </label>
+                      <input id="stylist" name="stylist" placeholder="z. B. egal / Bella / Mia" className={inputCls} />
+                    </div>
+                    <div>
                       <label htmlFor="date" className="mb-1.5 block text-xs font-medium text-paper/70">
                         Wunschdatum *
                       </label>
@@ -168,8 +162,8 @@ export function Booking() {
                     </div>
                     <div className="flex items-end">
                       <label className="flex cursor-pointer items-center gap-3 rounded-xl border border-line bg-bg px-4 py-3 text-sm text-paper/70 transition-colors hover:border-paper/30">
-                        <input type="checkbox" name="rental" className="h-4 w-4 accent-[#ff6b2c]" />
-                        Ersatzwagen gewünscht
+                        <input type="checkbox" name="firstvisit" className="h-4 w-4 accent-[#c9a36a]" />
+                        Ich bin zum ersten Mal hier
                       </label>
                     </div>
                     <div className="sm:col-span-2">
@@ -180,7 +174,7 @@ export function Booking() {
                         id="message"
                         name="message"
                         rows={4}
-                        placeholder="Beschreiben Sie kurz Ihr Anliegen — z. B. Geräusche, Warnleuchten, gewünschter Zeitraum …"
+                        placeholder="Erzähl uns kurz von deinem Wunsch — z. B. aktuelle Haarlänge, Wunschfarbe, Anlass oder gewünschter Zeitraum …"
                         className={`${inputCls} resize-none`}
                       />
                     </div>
