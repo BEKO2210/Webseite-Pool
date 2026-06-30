@@ -8,8 +8,8 @@ export function Process() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           kicker="So läuft's ab"
-          title="Transparenz ist kein Versprechen. Sondern Ablauf."
-          text="Vier klare Schritte — Sie wissen jederzeit, was mit Ihrem Fahrzeug passiert und was es kostet."
+          title="Vom ersten Klick zum fertigen Look."
+          text="Vier entspannte Schritte — du weißt jederzeit, was passiert und was es kostet."
         />
 
         <ol className="mt-14 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">

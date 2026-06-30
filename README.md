@@ -28,3 +28,4 @@ Jede Site bleibt unabhängig: eigene Dependencies, eigene Domain, eigenes Deploy
 | Site | Branche | Status |
 |---|---|---|
 | [`sites/kfz-koenig`](sites/kfz-koenig) | Kfz-Werkstatt / Meisterbetrieb | ✅ fertig |
+| [`sites/salon-bella`](sites/salon-bella) | Friseur- & Beauty-Salon | ✅ fertig |

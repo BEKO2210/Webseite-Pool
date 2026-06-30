@@ -2,14 +2,14 @@
 
 import { motion } from "framer-motion";
 import {
-  ClipboardCheck, Droplets, Disc3, CircleDot, ScanLine, Snowflake, BadgeCheck, Wrench,
+  Scissors, Palette, Sparkles, Droplets, Crown, Flower2, Wand2, Gem,
   ArrowUpRight, type LucideIcon,
 } from "lucide-react";
 import { services } from "@/lib/content";
 import { SectionHeading } from "./ui/SectionHeading";
 
 const icons: Record<string, LucideIcon> = {
-  ClipboardCheck, Droplets, Disc3, CircleDot, ScanLine, Snowflake, BadgeCheck, Wrench,
+  Scissors, Palette, Sparkles, Droplets, Crown, Flower2, Wand2, Gem,
 };
 
 export function Services() {
@@ -18,13 +18,13 @@ export function Services() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           kicker="Leistungen"
-          title="Alles für Ihr Auto. Unter einem Dach."
-          text="Von der Inspektion bis zur Unfallinstandsetzung — markenübergreifend, mit Festpreis-Angebot vor jeder Reparatur. Preise sind Demo-Richtwerte."
+          title="Alles für deinen Look. Unter einem Dach."
+          text="Von Schnitt und Farbe über Balayage und Pflege bis zu Braut-Styling und Beauty — mit ehrlicher Beratung vor jeder Behandlung. Preise sind Demo-Richtwerte."
         />
 
         <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((s, i) => {
-            const Icon = icons[s.icon] ?? Wrench;
+            const Icon = icons[s.icon] ?? Scissors;
             return (
               <motion.a
                 key={s.id}

@@ -3,13 +3,13 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, Wrench } from "lucide-react";
+import { Menu, X, Phone, Scissors } from "lucide-react";
 import { business } from "@/lib/content";
 
 const nav = [
   { href: "#leistungen", label: "Leistungen" },
   { href: "#ablauf", label: "Ablauf" },
-  { href: "#werkstatt", label: "Werkstatt" },
+  { href: "#galerie", label: "Galerie" },
   { href: "#bewertungen", label: "Bewertungen" },
   { href: "#faq", label: "FAQ" },
   { href: "#kontakt", label: "Kontakt" },
@@ -38,10 +38,10 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="#" className="flex items-center gap-2.5" aria-label={`${business.name} — Startseite`}>
           <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-ember text-bg">
-            <Wrench className="h-4.5 w-4.5" strokeWidth={2.5} aria-hidden />
+            <Scissors className="h-4.5 w-4.5" strokeWidth={2.5} aria-hidden />
           </span>
-          <span className="font-display text-xl font-semibold uppercase tracking-wide">
-            König<span className="text-ember">.</span>Werkstatt
+          <span className="font-display text-2xl font-semibold uppercase tracking-wide">
+            Salon<span className="text-ember">.</span>Bella
           </span>
         </Link>
 

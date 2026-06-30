@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, Phone, ShieldCheck, Star, Timer } from "lucide-react";
+import { ArrowRight, Phone, Sparkles, Star, Clock } from "lucide-react";
 import { business, stats } from "@/lib/content";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -19,7 +19,7 @@ export function Hero() {
 
   return (
     <section className="noise spotlight relative flex min-h-svh flex-col justify-end overflow-hidden">
-      {/* Hintergrund: cinematic Video-Loop (Higgsfield Seedance 2.0) */}
+      {/* Hintergrund: Video-Loop aus dem Salon */}
       <div className="absolute inset-0" aria-hidden>
         <video
           autoPlay
@@ -27,35 +27,34 @@ export function Hero() {
           loop
           playsInline
           preload="metadata"
-          poster="/assets/hero.jpg"
           className="absolute inset-0 h-full w-full object-cover"
         >
-          <source src="/assets/hero-loop.mp4" type="video/mp4" />
+          <source src="/assets/spiegel.mp4" type="video/mp4" />
         </video>
-        {/* Cinematic Grade über dem Video */}
+        {/* Warmer Grade über dem Video */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 70% 55% at 70% 18%, rgba(255,180,84,0.1), transparent 65%), linear-gradient(165deg, rgba(10,10,11,0.55) 0%, rgba(10,10,11,0.75) 62%)",
+              "radial-gradient(ellipse 70% 55% at 70% 18%, rgba(201,163,106,0.12), transparent 65%), linear-gradient(165deg, rgba(12,10,13,0.55) 0%, rgba(12,10,13,0.78) 62%)",
           }}
         />
-        {/* Lichtkegel von oben */}
+        {/* Lichtschein von oben */}
         <div
           className="absolute left-1/2 top-0 h-[70vh] w-[120vw] -translate-x-1/2"
           style={{
             background:
-              "conic-gradient(from 180deg at 50% 0%, transparent 42%, rgba(255,180,84,0.07) 50%, transparent 58%)",
+              "conic-gradient(from 180deg at 50% 0%, transparent 42%, rgba(201,163,106,0.08) 50%, transparent 58%)",
           }}
         />
         {/* Boden-Vignette */}
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-bg via-bg/70 to-transparent" />
         {/* Riesige Hintergrund-Typo */}
         <p
-          className="text-stroke pointer-events-none absolute -right-8 top-24 select-none font-display text-[22vw] font-bold uppercase leading-none opacity-40 lg:text-[16vw]"
+          className="text-stroke pointer-events-none absolute -right-8 top-24 select-none font-display text-[24vw] font-bold uppercase leading-none opacity-40 lg:text-[18vw]"
           aria-hidden
         >
-          König
+          Bella
         </p>
       </div>
 
@@ -64,22 +63,22 @@ export function Hero() {
           {...anim(0.05)}
           className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.3em] text-amber-glow"
         >
-          <ShieldCheck className="h-4 w-4" aria-hidden />
+          <Sparkles className="h-4 w-4" aria-hidden />
           {business.masterSince} · {business.city}
         </motion.p>
 
         <motion.h1
           {...anim(0.15)}
-          className="mt-5 max-w-4xl font-display text-[13vw] font-bold uppercase leading-[0.92] tracking-tight sm:text-7xl lg:text-8xl"
+          className="mt-5 max-w-4xl font-display text-[15vw] font-bold uppercase leading-[0.92] tracking-tight sm:text-7xl lg:text-8xl"
         >
-          Meisterqualität
+          Schönheit
           <br />
-          für Ihr <span className="text-ember">Fahrzeug</span>
+          ist <span className="text-ember">Handwerk</span>
         </motion.h1>
 
         <motion.p {...anim(0.28)} className="mt-6 max-w-xl text-lg leading-relaxed text-paper/75">
-          Schnelle Diagnose, klare Kommunikation und transparente Freigabe vor
-          jeder Reparatur — Ihre Kfz-Werkstatt in {business.city} für alle Marken.
+          Ehrliche Typberatung, präzises Handwerk und Premium-Produkte —
+          dein Friseur- &amp; Beauty-Salon in {business.city} für Schnitt, Farbe und Styling.
         </motion.p>
 
         <motion.div {...anim(0.4)} className="mt-9 flex flex-wrap items-center gap-4">
@@ -109,8 +108,8 @@ export function Hero() {
             4,9 bei Google
           </span>
           <span className="flex items-center gap-1.5">
-            <Timer className="h-4 w-4 text-ember" aria-hidden />
-            Rückmeldung in 24 h
+            <Clock className="h-4 w-4 text-ember" aria-hidden />
+            Termin oft noch diese Woche
           </span>
         </motion.div>
 

@@ -10,7 +10,7 @@ export function Reviews() {
         <div className="flex flex-wrap items-end justify-between gap-6">
           <SectionHeading
             kicker="Bewertungen"
-            title="Das sagen unsere Kunden"
+            title="Das sagen unsere Kundinnen"
             text="Demo-Bewertungen — im Kundenprojekt werden hier echte Google-Rezensionen eingebunden."
           />
           <Reveal delay={0.1}>

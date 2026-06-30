@@ -1,9 +1,9 @@
-import { Award, FileCheck2, CalendarClock, Car, type LucideIcon } from "lucide-react";
+import { Award, Sparkles, CalendarClock, Heart, type LucideIcon } from "lucide-react";
 import { trustPoints, business } from "@/lib/content";
 import { Reveal } from "./ui/Reveal";
 import { MediaPlaceholder } from "./MediaPlaceholder";
 
-const icons: Record<string, LucideIcon> = { Award, FileCheck2, CalendarClock, Car };
+const icons: Record<string, LucideIcon> = { Award, Sparkles, CalendarClock, Heart };
 
 export function Trust() {
   return (
@@ -12,16 +12,16 @@ export function Trust() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
             <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-ember">
-              {"// Vertrauen"}
+              Vertrauen
             </p>
             <h2 className="mt-3 font-display text-4xl font-semibold uppercase leading-[0.95] tracking-tight sm:text-5xl">
-              Warum {business.city} uns
+              Warum {business.city} sich
               <br />
-              die Schlüssel gibt
+              bei uns verschönern lässt
             </h2>
             <p className="mt-5 max-w-lg text-base leading-relaxed text-muted">
-              Seit {business.founded} stehen wir für ehrliche Werkstattarbeit:
-              Meisterhand statt Massenabfertigung, Befund statt Bauchgefühl.
+              Seit {business.founded} stehen wir für ehrliches Handwerk:
+              echte Beratung statt Massenabfertigung, Sorgfalt statt Schnellschuss.
             </p>
 
             <div className="mt-10 grid gap-6 sm:grid-cols-2">
@@ -46,10 +46,8 @@ export function Trust() {
 
           <Reveal delay={0.15} className="relative">
             <MediaPlaceholder
-              scene="diagnose"
-              asset="diagnose-clip.mp4"
-              src="/assets/diagnose.jpg"
-              video
+              label="Im Salon · Pflege & Wäsche"
+              videoSrc="/assets/waschbecken.mp4"
               scanline
               className="aspect-[4/5] w-full"
             />

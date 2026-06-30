@@ -13,8 +13,8 @@ export function LocationSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           kicker="Standort"
-          title="Sie finden uns mitten im Gewerbegebiet"
-          text="Gut erreichbar, kostenlose Parkplätze direkt vor der Tür — und der Kaffee in der Wartezone geht aufs Haus."
+          title="Du findest uns mitten in der Stadt"
+          text="Zentral gelegen, gut mit Bahn und Auto erreichbar — und der Espresso (oder ein Glas Prosecco) geht aufs Haus."
         />
 
         <div className="mt-14 grid gap-4 lg:grid-cols-5">
